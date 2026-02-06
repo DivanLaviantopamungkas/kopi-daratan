@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daratan Kopi 25 - Kopi Premium dengan Sentuhan Mitologi</title>
+    <meta name="description" content="Daratan Kopi 25 menghadirkan kopi berkualitas dengan nuansa mitologi Zeus. Rasakan pengalaman unik menikmati kopi di kedai kami.">
+    
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Daratan Kopi 25 - Kopi Premium dengan Sentuhan Mitologi">
+    <meta property="og:description" content="Daratan Kopi 25 menghadirkan kopi berkualitas dengan nuansa mitologi Zeus.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daratankopi25.com">
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'coffee-dark': '#0b0f0c',
+                        'coffee-darker': '#111827',
+                        'accent-gold': '#fbbf24',
+                        'glow-cyan': '#22d3ee',
+                        'glow-blue': '#3b82f6'
+                    },
+                    fontFamily: {
+                        'heading': ['Space Grotesk', 'sans-serif'],
+                        'body': ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'lightning': 'lightning 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.7 }
+                        },
+                        'lightning': {
+                            '0%, 100%': { opacity: 0.2 },
+                            '50%': { opacity: 0.5 }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-coffee-darker text-gray-100 font-body overflow-x-hidden">
+    
+    <!-- Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 right-0 h-1 z-50 bg-gradient-to-r from-accent-gold via-glow-cyan to-glow-blue" id="scrollProgress"></div>
+    
+    <!-- Navbar -->
+    <nav class="fixed w-full py-4 px-6 z-40 transition-all duration-300" id="navbar">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-accent-gold to-glow-cyan flex items-center justify-center">
+                    <i class="fas fa-bolt text-coffee-darker text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-xl">Daratan Kopi <span class="text-accent-gold">25</span></span>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#gallery" class="nav-link">Galeri</a>
+                <a href="#testimonials" class="nav-link">Testimoni</a>
+                <a href="#location" class="nav-link">Lokasi</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+                <button class="btn-primary" onclick="smoothScroll('#contact')">
+                    Pesan Sekarang
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-xl" id="menuToggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed top-0 left-0 w-full h-0 bg-coffee-dark/95 backdrop-blur-lg overflow-hidden transition-all duration-500" id="mobileMenu">
+            <div class="container mx-auto px-6 py-20">
+                <button class="absolute top-6 right-6 text-2xl" id="closeMenu" aria-label="Close Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="flex flex-col space-y-8 text-center">
+                    <a href="#home" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Beranda</a>
+                    <a href="#menu" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Menu</a>
+                    <a href="#about" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Tentang</a>
+                    <a href="#gallery" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Galeri</a>
+                    <a href="#testimonials" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Testimoni</a>
+                    <a href="#location" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Lokasi</a>
+                    <a href="#contact" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Kontak</a>
+                    <button class="btn-primary mx-auto mt-6" onclick="closeMobileMenu(); smoothScroll('#contact');">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-6 relative overflow-hidden">
+        <!-- Lightning Background Effect -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-glow-cyan/5 rounded-full blur-3xl animate-pulse-glow"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl animate-pulse-glow"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
+                <div class="absolute inset-0 bg-gradient-to-br from-transparent via-glow-cyan/10 to-transparent animate-lightning"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center bg-coffee-dark/80 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-accent-gold/30">
+                        <span class="w-2 h-2 bg-accent-gold rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-sm font-medium">Buka setiap hari 07:00 - 22:00</span>
+                    </div>
+                    
+                    <!-- Heading -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
+                        Daratan Kopi 
+                        <span class="text-accent-gold relative">
+                            25
+                            <span class="absolute -top-2 -right-4 text-2xl">⚡</span>
+                        </span>
+                    </h1>
+                    
+                    <!-- Subheading -->
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+                        Rasakan energi mitologi dalam setiap tegukan kopi premium kami. Pengalaman tak terlupakan di kedai dengan nuansa <span class="text-accent-gold font-medium">Zeus & petir</span>.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <button class="btn-primary" onclick="smoothScroll('#menu')">
+                            <i class="fas fa-mug-hot mr-2"></i> Lihat Menu
+                        </button>
+                        <button class="btn-secondary" onclick="smoothScroll('#location')">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Lokasi Kami
+                        </button>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent-gold">25+</div>
+                            <div class="text-sm text-gray-400">Jenis Kopi</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent-gold">2019</div>
+                            <div class="text-sm text-gray-400">Berdiri Sejak</div>
+                        </div>
+                        <div class="text-center md:col-span-1 col-span-2">
+                            <div class="text-3xl font-bold text-accent-gold">4.8</div>
+                            <div class="text-sm text-gray-400">Rating Google</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative">
+                        <!-- Main Image Container -->
+                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent-gold/30 shadow-2xl relative">
+                            <!-- Placeholder for logo/artwork -->
+                            <div class="w-full h-full bg-gradient-to-br from-coffee-dark via-coffee-darker to-accent-gold/20 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-9xl mb-4 animate-float">⚡</div>
+                                    <div class="text-2xl font-heading font-bold">Daratan Kopi 25</div>
+                                    <div class="text-gray-400 mt-2">Kopi x Mitologi</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-glow-cyan/20 rounded-full blur-xl"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-gold/20 rounded-full blur-xl"></div>
+                        
+                        <!-- Decorative Badges -->
+                        <div class="absolute -top-2 -left-2 bg-coffee-dark border border-accent-gold/50 rounded-2xl px-4 py-2 shadow-lg">
+                            <span class="text-sm font-medium">Kopi Terpilih</span>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-coffee-dark border border-glow-cyan/50 rounded-2xl px-4 py-2 shadow-lg">
+                            <span class="text-sm font-medium">Suasana Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Keunggulan Section -->
+    <section class="py-16 px-6 bg-coffee-dark/50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+                    Mengapa Memilih <span class="text-accent-gold">Kami</span>?
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Daratan Kopi 25 menghadirkan pengalaman berbeda dengan kombinasi kopi premium dan nuansa mitologi yang epik.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-gold to-glow-cyan flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-seedling text-2xl text-coffee-darker"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Kopi Pilihan</h3>
+                    <p class="text-gray-400 text-center">
+                        Hanya biji kopi terbaik dari petani lokal pilihan yang kami olah dengan teknik roasting khusus.
+                    </p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-glow-cyan to-glow-blue flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-couch text-2xl text-coffee-darker"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Suasana Nyaman</h3>
+                    <p class="text-gray-400 text-center">
+                        Interior dengan tema Zeus & mitologi Yunani menciptakan atmosfer unik dan nyaman untuk bersantai.
+                    </p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-glow-blue to-accent-gold flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-coins text-2xl text-coffee-darker"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Harga Bersahabat</h3>
+                    <p class="text-gray-400 text-center">
+                        Kualitas premium dengan harga terjangkau. Nikmati kopi terbaik tanpa menguras kantong.
+                    </p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-gold to-glow-blue flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-wifi text-2xl text-coffee-darker"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-center">WiFi & Colokan</h3>
+                    <p class="text-gray-400 text-center">
+                        WiFi cepat dan colokan di setiap meja, cocok untuk bekerja, nongkrong, atau meeting santai.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+                    Menu <span class="text-accent-gold">Unggulan</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Jelajahi berbagai pilihan minuman dan makanan kami. Setiap sajian dibuat dengan perhatian terhadap detail.
+                </p>
+            </div>
+            
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="100">
+                <button class="menu-filter active" data-filter="all">Semua Menu</button>
+                <button class="menu-filter" data-filter="kopi">Kopi</button>
+                <button class="menu-filter" data-filter="non-kopi">Non-Kopi</button>
+                <button class="menu-filter" data-filter="snack">Snack</button>
+            </div>
+            
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menuContainer">
+                <!-- Menu items will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tentang Section -->
+    <section id="about" class="py-16 px-6 bg-coffee-dark/50">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <!-- About Image -->
+                    <div class="relative">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl">
+                            <div class="h-80 bg-gradient-to-br from-coffee-darker to-accent-gold/30 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-8xl mb-4">⚡</div>
+                                    <div class="text-2xl font-heading font-bold">Daratan Kopi 25</div>
+                                    <div class="text-gray-400 mt-2">Since 2019</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-4 -right-4 bg-coffee-dark border border-accent-gold/50 rounded-2xl px-6 py-3 shadow-xl">
+                            <div class="flex items-center">
+                                <span class="text-2xl font-bold text-accent-gold mr-2">25</span>
+                                <span class="font-medium">Tahun Pengalaman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
+                        Cerita <span class="text-accent-gold">Kami</span>
+                    </h2>
+                    
+                    <p class="text-gray-300 mb-6">
+                        <span class="text-accent-gold font-bold">Daratan Kopi 25</span> didirikan pada tahun 2019 dengan visi menghadirkan pengalaman ngopi yang berbeda. Terinspirasi dari kekuatan dan keagungan Dewa Zeus dalam mitologi Yunani, kami ingin setiap pengunjung merasakan "energi petir" dalam setiap tegukan kopi.
+                    </p>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Nama "25" melambangkan 25 jenis kopi pertama yang kami sajikan saat pembukaan, serta usia pendiri saat membuka kedai ini. Kini, kami telah berkembang dengan tetap mempertahankan kualitas dan filosofi awal.
+                    </p>
+                    
+                    <p class="text-gray-300 mb-8">
+                        Suasana interior kami dirancang khusus dengan elemen-elemen mitologi Yunani, petir, dan energi kosmik untuk menciptakan pengalaman yang immersive dan tak terlupakan bagi setiap pengunjung.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent-gold mr-2"></i>
+                            <span>Kopi dari petani lokal terpilih</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent-gold mr-2"></i>
+                            <span>Roasting khusus setiap hari</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-accent-gold mr-2"></i>
+                            <span>Suasana unik bertema mitologi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galeri Section -->
+    <section id="gallery" class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+                    <span class="text-accent-gold">Galeri</span> Kami
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Jelajahi suasana unik Daratan Kopi 25 melalui koleksi foto-foto kami.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Lightbox Modal -->
+        <div class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center hidden" id="lightboxModal">
+            <div class="relative max-w-4xl w-full mx-4">
+                <button class="absolute -top-12 right-0 text-3xl text-white hover:text-accent-gold transition-colors" id="closeLightbox" aria-label="Close Lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="bg-coffee-dark rounded-2xl overflow-hidden">
+                    <img id="lightboxImage" src="" alt="" class="w-full h-auto max-h-[70vh] object-contain">
+                    <div class="p-4">
+                        <h3 id="lightboxTitle" class="text-xl font-heading font-bold"></h3>
+                        <p id="lightboxDesc" class="text-gray-400 mt-2"></p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between mt-4">
+                    <button class="text-white hover:text-accent-gold transition-colors" id="prevImage" aria-label="Previous Image">
+                        <i class="fas fa-chevron-left mr-2"></i> Sebelumnya
+                    </button>
+                    <button class="text-white hover:text-accent-gold transition-colors" id="nextImage" aria-label="Next Image">
+                        Selanjutnya <i class="fas fa-chevron-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimoni Section -->
+    <section id="testimonials" class="py-16 px-6 bg-coffee-dark/50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+                    Kata <span class="text-accent-gold">Pelanggan</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Lihat apa kata mereka tentang pengalaman di Daratan Kopi 25.
+                </p>
+            </div>
+            
+            <div class="relative max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <!-- Testimonial Slider -->
+                <div class="overflow-hidden rounded-3xl bg-coffee-dark/80 backdrop-blur-sm border border-accent-gold/20 p-8">
+                    <div class="testimonial-slider" id="testimonialSlider">
+                        <!-- Testimonials will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Testimonial Navigation -->
+                    <div class="flex justify-center mt-8 space-x-4">
+                        <button class="testimonial-nav" id="prevTestimonial" aria-label="Previous Testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="flex space-x-2" id="testimonialDots">
+                            <!-- Dots will be populated by JavaScript -->
+                        </div>
+                        <button class="testimonial-nav" id="nextTestimonial" aria-label="Next Testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Decorative Elements -->
+                <div class="absolute -top-4 -left-4 w-16 h-16 bg-accent-gold/10 rounded-full blur-xl"></div>
+                <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-glow-cyan/10 rounded-full blur-xl"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lokasi & Jam Buka Section -->
+    <section id="location" class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+                    Lokasi & <span class="text-accent-gold">Jam Buka</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Kunjungi kedai kami dan nikmati pengalaman langsung di Daratan Kopi 25.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Map & Address -->
+                <div data-aos="fade-right">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl mb-8">
+                        <!-- Map Placeholder -->
+                        <div class="h-80 bg-gradient-to-br from-coffee-darker to-glow-cyan/20 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-6xl text-accent-gold mb-4"></i>
+                                <h3 class="text-2xl font-heading font-bold">Daratan Kopi 25</h3>
+                                <p class="text-gray-400 mt-2">Jl. Mitologi No. 25, Jakarta Selatan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-accent-gold text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-heading font-bold text-lg mb-1">Alamat</h4>
+                                <p class="text-gray-400">Jl. Mitologi No. 25, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12120</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-accent-gold text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-heading font-bold text-lg mb-1">Jam Operasional</h4>
+                                <p class="text-gray-400">Setiap hari: 07:00 - 22:00 WIB</p>
+                                <p class="text-gray-400 text-sm">Termasuk hari libur nasional</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-accent-gold text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-heading font-bold text-lg mb-1">Telepon</h4>
+                                <p class="text-gray-400">(021) 2555-2525</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary mt-8 w-full" onclick="window.open('https://maps.google.com/?q=Daratan+Kopi+25+Jakarta+Selatan', '_blank')">
+                        <i class="fas fa-external-link-alt mr-2"></i> Buka di Google Maps
+                    </button>
+                </div>
+                
+                <!-- Opening Hours & Contact Form -->
+                <div data-aos="fade-left">
+                    <!-- Opening Hours Card -->
+                    <div class="bg-coffee-dark/80 backdrop-blur-sm rounded-3xl p-8 mb-8 border border-accent-gold/20">
+                        <h3 class="text-2xl font-heading font-bold mb-6 text-center">Jam Buka</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-800">
+                                <span class="font-medium">Senin - Jumat</span>
+                                <span class="text-accent-gold font-bold">07:00 - 22:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-800">
+                                <span class="font-medium">Sabtu - Minggu</span>
+                                <span class="text-accent-gold font-bold">07:00 - 23:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="font-medium">Hari Libur</span>
+                                <span class="text-accent-gold font-bold">08:00 - 22:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-4 bg-coffee-darker rounded-2xl">
+                            <div class="flex items-center">
+                                <i class="fas fa-info-circle text-glow-cyan mr-3 text-xl"></i>
+                                <p class="text-sm text-gray-400">
+                                    Pada hari libur nasional, kami tetap buka dengan jam operasional khusus. Disarankan reservasi untuk kunjungan di atas 5 orang.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="bg-coffee-dark/80 backdrop-blur-sm rounded-3xl p-8 border border-accent-gold/20">
+                        <h3 class="text-2xl font-heading font-bold mb-6 text-center">Hubungi Kami</h3>
+                        <p class="text-gray-400 text-center mb-6">
+                            Ingin reservasi atau menanyakan sesuatu? Kirim pesan langsung ke WhatsApp kami.
+                        </p>
+                        
+                        <form id="whatsappForm">
+                            <div class="mb-6">
+                                <label for="name" class="block mb-2 font-medium">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="form-input" placeholder="Masukkan nama Anda">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block mb-2 font-medium">Nomor WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       class="form-input" placeholder="Contoh: 081234567890">
+                            </div>
+                            
+                            <div class="mb-8">
+                                <label for="message" class="block mb-2 font-medium">Pesan</label>
+                                <textarea id="message" name="message" rows="4" required 
+                                          class="form-input" placeholder="Tulis pesan Anda di sini..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full">
+                                <i class="fab fa-whatsapp mr-2"></i> Kirim ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-coffee-dark py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-accent-gold to-glow-cyan flex items-center justify-center">
+                            <i class="fas fa-bolt text-coffee-darker text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-xl">Daratan Kopi <span class="text-accent-gold">25</span></h3>
+                            <p class="text-gray-400 text-sm">Kopi x Mitologi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        Menghadirkan kopi premium dengan nuansa mitologi Zeus yang epik. Pengalaman ngopi yang tak terlupakan sejak 2019.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Tautan Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="footer-link">Beranda</a></li>
+                        <li><a href="#menu" class="footer-link">Menu</a></li>
+                        <li><a href="#about" class="footer-link">Tentang Kami</a></li>
+                        <li><a href="#gallery" class="footer-link">Galeri</a></li>
+                        <li><a href="#testimonials" class="footer-link">Testimoni</a></li>
+                        <li><a href="#location" class="footer-link">Lokasi</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Kontak</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3"></i>
+                            <span class="text-gray-400">Jl. Mitologi No. 25, Jakarta Selatan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-accent-gold mt-1 mr-3"></i>
+                            <span class="text-gray-400">(021) 2555-2525</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-accent-gold mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@daratankopi25.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Ikuti Kami</h4>
+                    <p class="text-gray-400 mb-6">
+                        Ikuti perkembangan terbaru dan promo spesial dari Daratan Kopi 25.
+                    </p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="mt-8">
+                        <p class="text-gray-400 text-sm mb-2">Dapatkan info promo terbaru</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Email Anda" class="flex-grow bg-coffee-darker border border-gray-800 rounded-l-2xl px-4 py-3 focus:outline-none focus:border-accent-gold">
+                            <button class="bg-gradient-to-r from-accent-gold to-glow-cyan text-coffee-darker font-bold px-4 rounded-r-2xl hover:opacity-90 transition-opacity">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-500">
+                    &copy; <span id="currentYear"></span> Daratan Kopi 25. Hak cipta dilindungi.
+                </p>
+                <p class="text-gray-600 text-sm mt-2">
+                    Dibuat dengan <i class="fas fa-heart text-red-500 mx-1"></i> untuk para pecinta kopi.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        // Initialize AOS inside HTML to ensure it runs after page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                offset: 100,
+                once: true
+            });
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
