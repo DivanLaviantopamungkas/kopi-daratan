@@ -1,708 +1,644 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daratan Kopi 25 - Kopi Premium dengan Sentuhan Mitologi</title>
-    <meta name="description" content="Daratan Kopi 25 menghadirkan kopi berkualitas dengan nuansa mitologi Zeus. Rasakan pengalaman unik menikmati kopi di kedai kami.">
-    
-    <!-- OpenGraph Meta Tags -->
-    <meta property="og:title" content="Daratan Kopi 25 - Kopi Premium dengan Sentuhan Mitologi">
-    <meta property="og:description" content="Daratan Kopi 25 menghadirkan kopi berkualitas dengan nuansa mitologi Zeus.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://daratankopi25.com">
-    
-    <!-- Favicon placeholder -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <title>Daratan Kopi 25 · Kopi & Roti Bakar Dengkek Pati</title>
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Daratan Kopi 25 – Kedai di depan Bumi Walisongo Dengkek. Roti bakar 2 sides (Abon, Chocomaltine, Crumbs), Donat 6K 15 varian, Burjo, Kopi Klotok. Alamat lengkap 63V8+93C Jl. Desa Dengkek, Pati."
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>"
+    />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..700;1,300..700&family=Plus+Jakarta+Sans:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Tailwind Custom Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'coffee-dark': '#0b0f0c',
-                        'coffee-darker': '#111827',
-                        'accent-gold': '#fbbf24',
-                        'glow-cyan': '#22d3ee',
-                        'glow-blue': '#3b82f6'
-                    },
-                    fontFamily: {
-                        'heading': ['Space Grotesk', 'sans-serif'],
-                        'body': ['Plus Jakarta Sans', 'sans-serif']
-                    },
-                    animation: {
-                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-                        'lightning': 'lightning 3s ease-in-out infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        'pulse-glow': {
-                            '0%, 100%': { opacity: 1 },
-                            '50%': { opacity: 0.7 }
-                        },
-                        'lightning': {
-                            '0%, 100%': { opacity: 0.2 },
-                            '50%': { opacity: 0.5 }
-                        },
-                        'float': {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-coffee-darker text-gray-100 font-body overflow-x-hidden">
-    
-    <!-- Scroll Progress Bar -->
-    <div class="fixed top-0 left-0 right-0 h-1 z-50 bg-gradient-to-r from-accent-gold via-glow-cyan to-glow-blue" id="scrollProgress"></div>
-    
-    <!-- Navbar -->
-    <nav class="fixed w-full py-4 px-6 z-40 transition-all duration-300" id="navbar">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-accent-gold to-glow-cyan flex items-center justify-center">
-                    <i class="fas fa-bolt text-coffee-darker text-lg"></i>
-                </div>
-                <div>
-                    <span class="font-heading font-bold text-xl">Daratan Kopi <span class="text-accent-gold">25</span></span>
-                </div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- PRELOADER ANIMATION (HALUS) -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo">
+          <span>Daratan Kopi 25</span>
+        </div>
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+
+    <!-- NAVBAR DENGAN ANIMASI SCROLL -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">
+          <img
+            src="images/logo1.png"
+            alt="Daratan Kopi 25 Logo"
+            class="logo-img"
+          />
+          <span class="logo-text">Daratan Kopi 25</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+            <li>
+              <a href="#tentang" class="nav-link" data-text="Tentang"
+                >Tentang</a
+              >
+            </li>
+            <li><a href="#menu" class="nav-link" data-text="Menu">Menu</a></li>
+            <li>
+              <a href="#galeri" class="nav-link" data-text="Galeri">Galeri</a>
+            </li>
+            <li>
+              <a href="#lokasi" class="nav-link" data-text="Lokasi">Lokasi</a>
+            </li>
+            <li>
+              <a href="#kontak" class="nav-link" data-text="Kontak">Kontak</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION DENGAN PARALLAX & ANIMASI MUNCUL BERTAHAP -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-content">
+        <div class="hero-badge-wrapper">
+          <span class="hero-badge animate-float">
+            <i class="fas fa-location-dot"></i> Dengkek, Pati • Depan Bumi
+            Walisongo
+          </span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line line-1">Roti Bakar 2 Sides</span>
+          <span class="title-line line-2">Donat 6K • Burjo</span>
+          <span class="title-line line-3">Kopi Klotok Susu</span>
+        </h1>
+        <p class="hero-subtitle">
+          Kedai kecil di pinggir sawah, depan Bumi Walisongo Jeng Asih
+          Randukuning. 15 varian donat, 25+ menu roti bakar, magelangan spesial,
+          dan tea series.
+        </p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn-primary btn-pulse">
+            <i class="fas fa-mug-hot"></i> Lihat Menu
+            <span class="btn-ring"></span>
+          </a>
+          <a href="#lokasi" class="btn-outline btn-shine">
+            <i class="fas fa-map-pin"></i> Alamat Lengkap
+          </a>
+        </div>
+        <div class="hero-scroll-indicator animate-bounce">
+          <span class="scroll-text">Scroll</span>
+          <span class="scroll-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG DENGK EK + ALAMAT LENGKAP DENGAN ANIMASI SLIDE -->
+    <section id="tentang" class="section about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image reveal slide-right">
+            <div class="image-wrapper">
+              <img
+                src="images/suasana.jpg"
+                alt="Suasana Daratan Kopi 25"
+                loading="lazy"
+              />
+              <div class="image-badge pulse-badge">
+                <i class="fas fa-map-pin"></i> 63V8+93C, Jl. Desa Dengkek
+              </div>
             </div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="nav-link">Beranda</a>
-                <a href="#menu" class="nav-link">Menu</a>
-                <a href="#about" class="nav-link">Tentang</a>
-                <a href="#gallery" class="nav-link">Galeri</a>
-                <a href="#testimonials" class="nav-link">Testimoni</a>
-                <a href="#location" class="nav-link">Lokasi</a>
-                <a href="#contact" class="nav-link">Kontak</a>
-                <button class="btn-primary" onclick="smoothScroll('#contact')">
-                    Pesan Sekarang
-                </button>
+            <div class="decoration-dots"></div>
+          </div>
+          <div class="about-text reveal slide-left">
+            <div class="section-tag">
+              <span class="tag-line"></span>
+              <span class="tag-text">Sejak 2019</span>
             </div>
-            
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-xl" id="menuToggle" aria-label="Toggle Menu">
-                <i class="fas fa-bars"></i>
+            <h2>Daratan Kopi <span>25</span></h2>
+            <p class="address-highlight">
+              <i class="fas fa-location-dot"></i>
+              <strong
+                >63V8+93C, Jl. Desa Dengkek, RT.009/RW.002, Dengkek, Kec. Pati,
+                Kabupaten Pati, Jawa Tengah 59119</strong
+              >
+              <span class="tooltip"
+                >Depan Bumi Walisongo Jeng Asih Randukuning</span
+              >
+            </p>
+            <p class="about-desc">
+              Kedai kami mulai buka 2019, terkenal dengan
+              <span class="text-gradient">Roti Bakar 2 sides</span> (Abon,
+              Chocomaltine, Crumbs, Tiramisu),
+              <span class="text-gradient">Donat Satuan 6K</span> dengan 15
+              varian (Tiramisu, Coklat Crunchy, Abon Hot Creamy, Red Velvet,
+              Oreo, Greentea, Caramel Crumb, dan banyak lagi), serta menu Burjo
+              komplit: Nasi Omelet, Magelangan Spesial, Pisang Bakar Spesial,
+              dan aneka minuman seperti Thai Tea, Choco Hazelnut, Kopi Klotok
+              Susu, dan GoodDay Freeze.
+            </p>
+
+            <div class="stats-container">
+              <div class="stat-item">
+                <span class="stat-num counter" data-target="15">0</span>
+                <span class="stat-label">Varian Donat</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num counter" data-target="25">0</span>
+                <span class="stat-label">Menu Roti Bakar</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num counter" data-target="30">0</span>
+                <span class="stat-label">Minuman</span>
+              </div>
+            </div>
+
+            <a href="#lokasi" class="btn-link">
+              <span>Cek Lokasi di Google Maps</span>
+              <i class="fas fa-arrow-right-long"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU UNGGULAN DENGAN ANIMASI CARD 3D & HOVER EFEK -->
+    <section id="menu" class="section menu">
+      <div class="container">
+        <div class="section-header reveal fade-up">
+          <span class="overline">Signature Collection</span>
+          <h2 class="section-title">Menu Unggulan <span>Kami</span></h2>
+          <p class="section-subtitle">
+            Menu favorit yang paling dicari — langsung dari dapur Daratan Kopi
+            25
+          </p>
+        </div>
+
+        <div class="menu-grid">
+          <!-- 1. Roti Bakar 2 Sides -->
+          <div class="menu-card reveal card-rotate">
+            <div class="menu-badge">Best Seller</div>
+            <div class="menu-img">
+              <img src="images/rotisides.png" alt="Roti Bakar 2 Sides" />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="menu-info">
+              <span class="menu-category">Roti Bakar</span>
+              <h3>Roti Bakar 2 Sides</h3>
+              <p class="menu-desc">
+                Abon + Keju • Chocomaltine + Kacang • Crumbs (Oreo/Red
+                Velvet/Greentea) • Tiramisu
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp23K - Rp25K</span>
+                <span class="menu-tag">2 rasa</span>
+              </div>
+            </div>
+          </div>
+          <!-- 2. Donat Satuan 6K -->
+          <div class="menu-card reveal card-rotate" data-delay="100">
+            <div class="menu-badge">15 Varian</div>
+            <div class="menu-img">
+              <img src="images/donat.avif" alt="Donat Satuan" />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="menu-info">
+              <span class="menu-category">Donat</span>
+              <h3>Donat Satuan</h3>
+              <p class="menu-desc">
+                Tiramisu, Coklat Crunchy, Abon Hot Creamy, Abon Sweet Creamy,
+                Red Velvet, Oreo, Greentea, Caramel, Milky Keju, Coklat Meses,
+                Almond
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp6K</span>
+                <span class="menu-tag">semua varian</span>
+              </div>
+            </div>
+          </div>
+          <!-- 3. Burjo: Nasi Omelet & Magelangan -->
+          <div class="menu-card reveal card-rotate" data-delay="200">
+            <div class="menu-img">
+              <img src="images/nasiomelet.jpg" alt="Nasi Omelet" />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="menu-info">
+              <span class="menu-category">Burjo</span>
+              <h3>Nasi Omelet</h3>
+              <p class="menu-desc">
+                Nasi hangat + omelet tebal. Juga ada Magelangan Spesial (Indomie
+                + nasi + sosis + bakso), Nasi Goreng Spesial
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp14K - Rp17K</span>
+                <span class="menu-tag">+telur</span>
+              </div>
+            </div>
+          </div>
+          <!-- 4. Kopi Klotok Susu & Kopi ABC -->
+          <div class="menu-card reveal card-rotate" data-delay="300">
+            <div class="menu-img">
+              <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=2069&auto=format&fit=crop"
+                alt="Kopi Klotok"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="menu-info">
+              <span class="menu-category">Kopi</span>
+              <h3>Kopi Klotok Susu</h3>
+              <p class="menu-desc">
+                Kopi bubuk asli + susu jahe. Juga ada Kopi Susu ABC, GoodDay
+                Freeze, Cappucino, Kopi Hitam, Nescafe
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp4K - Rp7K</span>
+                <span class="menu-tag">asli Pati</span>
+              </div>
+            </div>
+          </div>
+          <!-- 5. Pisang Bakar Spesial -->
+          <div class="menu-card reveal card-rotate" data-delay="400">
+            <div class="menu-img">
+              <img src="images/pisangbakar.jpg" alt="Pisang Bakar" />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="menu-info">
+              <span class="menu-category">Snack</span>
+              <h3>Pisang Bakar Spesial</h3>
+              <p class="menu-desc">
+                Pisang raja, topping keju + coklat. Tersedia juga Pisang Crispy
+                Ori & Spesial
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp15K - Rp17K</span>
+                <span class="menu-tag">keju melt</span>
+              </div>
+            </div>
+          </div>
+          <!-- 6. Tea Series & Choco Series -->
+          <div class="menu-card reveal card-rotate" data-delay="500">
+            <div class="menu-img">
+              <img src="images/taitea.jpg" alt="Thai Tea" />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="menu-info">
+              <span class="menu-category">Minuman</span>
+              <h3>Thai Tea · Choco Hazelnut</h3>
+              <p class="menu-desc">
+                Tea Series: Original, Grape, Lemon, Lychee, Markisa (4K-6K).
+                Milk Series: Greentea, Strawberry, Bubblegum (8K-9K). Choco
+                Series: Ori, Cappuccino, Cookies, Hazelnut (8K).
+              </p>
+              <div class="menu-footer">
+                <span class="menu-price">Rp4K - Rp9K</span>
+                <span class="menu-tag">18 varian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-cta reveal fade-up">
+          <a
+            href="#"
+            class="btn-outline btn-hover-lift"
+            onclick="
+              alert(
+                '🍞🥤 Menu lengkap: Roti Bakar 1 side / 2 sides, Donat Satuan 6K, Burjo, Snack, Tea Series, Choco Series, Coffee Series, Yoghurt & Others. Kunjungi kedai kami di Dengkek, Pati!',
+              );
+              return false;
+            "
+          >
+            <i class="fas-regular fa-utensils"></i> Tampilkan Semua Menu
+            <span class="btn-bg"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI DENGAN HOVER ZOOM & PARALLAX -->
+    <section id="galeri" class="section gallery">
+      <div class="container">
+        <div class="section-header reveal fade-up">
+          <span class="overline">Suasana & Visual</span>
+          <h2 class="section-title">Galeri <span>Kedai</span></h2>
+          <p class="section-subtitle">
+            Dari lesehan, roti bakar, donat, hingga kopi khas Dengkek
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal zoom-in">
+            <div class="gallery-img-wrapper">
+              <img src="images/suasana.jpg" alt="Suasana kedai malam" />
+              <div class="gallery-overlay">
+                <span>Suasana Lesehan</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item reveal zoom-in" data-delay="100">
+            <div class="gallery-img-wrapper">
+              <img src="images/rotisides.png" alt="Roti Bakar" />
+              <div class="gallery-overlay">
+                <span>Roti Bakar 2 Sides</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item reveal zoom-in" data-delay="200">
+            <div class="gallery-img-wrapper">
+              <img src="images/donat.avif" alt="Donat aneka rasa" />
+              <div class="gallery-overlay">
+                <span>Donat Satuan 6K</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item reveal zoom-in" data-delay="300">
+            <div class="gallery-img-wrapper">
+              <img src="images/pisanggoreng.jpg" alt="Pisanag Goreng" />
+              <div class="gallery-overlay">
+                <span>Pisang Goreng</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item reveal zoom-in" data-delay="400">
+            <div class="gallery-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1974&auto=format&fit=crop"
+                alt="Kopi susu"
+              />
+              <div class="gallery-overlay">
+                <span>Kopi Susu ABC</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item reveal zoom-in" data-delay="500">
+            <div class="gallery-img-wrapper">
+              <img src="images/lesehan.jpg" alt="Lesehan Dengkek" />
+              <div class="gallery-overlay">
+                <span>Lesehan & Wifi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI DENGAN ANIMASI SLIDER & AUTO PLAY -->
+    <section id="testimoni" class="section testimonials">
+      <div class="container">
+        <div class="section-header reveal fade-up">
+          <span class="overline">Testimoni</span>
+          <h2 class="section-title">Kata <span>Pelanggan</span></h2>
+          <p class="section-subtitle">
+            Omongan wong Pati sing wis mampir nang Daratan Kopi 25
+          </p>
+        </div>
+
+        <div class="testimonial-slider-container reveal">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+              <p>
+                "Roti bakar abone akeh, donat Tiramisune lembut. Paling seneng
+                varian Chocomaltine – kacang. Kopi klotoke mantep, es Thailand
+                tea seger."
+              </p>
+              <div class="user">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                  <span class="user-name">Dian Saputra</span>
+                  <span class="user-location">Pati Kota</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+              <p>
+                "Magelangan spesial + es Thai Tea, cocok banget buat ngabuburit.
+                Tempatnya adem, persis depan Bumi Walisongo. Donat Coklat
+                Crunchy Kacang wajib coba!"
+              </p>
+              <div class="user">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                  <span class="user-name">Fajar Hidayat</span>
+                  <span class="user-location">Randukuning</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+              <p>
+                "Kopi klotok susune mantep, pisang bakar spesial kejune medok.
+                Rega bersahabat, dadi langganan. Roti bakar Crumbs Greentea +
+                Tiramisu favorit keluargaku."
+              </p>
+              <div class="user">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                  <span class="user-name">Bu Yanti</span>
+                  <span class="user-location">Dengkek</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+              <p>
+                "Nasi omeletnya beda, tebal dan bumbunya meresap. Pisang crispy
+                spesial topping coklat-keju banyak. Tempat nongkrong favorit
+                anak Pati."
+              </p>
+              <div class="user">
+                <div class="user-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                  <span class="user-name">Rizky Ramadhan</span>
+                  <span class="user-location">Pati Lor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-nav">
+            <button class="nav-btn prev-btn" id="prevTestimonial">
+              <i class="fas fa-chevron-left"></i>
             </button>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+            <button class="nav-btn next-btn" id="nextTestimonial">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div class="md:hidden fixed top-0 left-0 w-full h-0 bg-coffee-dark/95 backdrop-blur-lg overflow-hidden transition-all duration-500" id="mobileMenu">
-            <div class="container mx-auto px-6 py-20">
-                <button class="absolute top-6 right-6 text-2xl" id="closeMenu" aria-label="Close Menu">
-                    <i class="fas fa-times"></i>
-                </button>
-                
-                <div class="flex flex-col space-y-8 text-center">
-                    <a href="#home" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Beranda</a>
-                    <a href="#menu" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Menu</a>
-                    <a href="#about" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Tentang</a>
-                    <a href="#gallery" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Galeri</a>
-                    <a href="#testimonials" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Testimoni</a>
-                    <a href="#location" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Lokasi</a>
-                    <a href="#contact" class="nav-link-mobile text-2xl" onclick="closeMobileMenu()">Kontak</a>
-                    <button class="btn-primary mx-auto mt-6" onclick="closeMobileMenu(); smoothScroll('#contact');">
-                        Pesan Sekarang
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-6 relative overflow-hidden">
-        <!-- Lightning Background Effect -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-glow-cyan/5 rounded-full blur-3xl animate-pulse-glow"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl animate-pulse-glow"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
-                <div class="absolute inset-0 bg-gradient-to-br from-transparent via-glow-cyan/10 to-transparent animate-lightning"></div>
-            </div>
-        </div>
-        
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
-                    <!-- Badge -->
-                    <div class="inline-flex items-center bg-coffee-dark/80 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-accent-gold/30">
-                        <span class="w-2 h-2 bg-accent-gold rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-sm font-medium">Buka setiap hari 07:00 - 22:00</span>
-                    </div>
-                    
-                    <!-- Heading -->
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-                        Daratan Kopi 
-                        <span class="text-accent-gold relative">
-                            25
-                            <span class="absolute -top-2 -right-4 text-2xl">⚡</span>
-                        </span>
-                    </h1>
-                    
-                    <!-- Subheading -->
-                    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
-                        Rasakan energi mitologi dalam setiap tegukan kopi premium kami. Pengalaman tak terlupakan di kedai dengan nuansa <span class="text-accent-gold font-medium">Zeus & petir</span>.
-                    </p>
-                    
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-4 mb-12">
-                        <button class="btn-primary" onclick="smoothScroll('#menu')">
-                            <i class="fas fa-mug-hot mr-2"></i> Lihat Menu
-                        </button>
-                        <button class="btn-secondary" onclick="smoothScroll('#location')">
-                            <i class="fas fa-map-marker-alt mr-2"></i> Lokasi Kami
-                        </button>
-                    </div>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent-gold">25+</div>
-                            <div class="text-sm text-gray-400">Jenis Kopi</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent-gold">2019</div>
-                            <div class="text-sm text-gray-400">Berdiri Sejak</div>
-                        </div>
-                        <div class="text-center md:col-span-1 col-span-2">
-                            <div class="text-3xl font-bold text-accent-gold">4.8</div>
-                            <div class="text-sm text-gray-400">Rating Google</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Hero Image -->
-                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="200">
-                    <div class="relative">
-                        <!-- Main Image Container -->
-                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent-gold/30 shadow-2xl relative">
-                            <!-- Placeholder for logo/artwork -->
-                            <div class="w-full h-full bg-gradient-to-br from-coffee-dark via-coffee-darker to-accent-gold/20 flex items-center justify-center">
-                                <div class="text-center">
-                                    <div class="text-9xl mb-4 animate-float">⚡</div>
-                                    <div class="text-2xl font-heading font-bold">Daratan Kopi 25</div>
-                                    <div class="text-gray-400 mt-2">Kopi x Mitologi</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Floating Elements -->
-                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-glow-cyan/20 rounded-full blur-xl"></div>
-                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-gold/20 rounded-full blur-xl"></div>
-                        
-                        <!-- Decorative Badges -->
-                        <div class="absolute -top-2 -left-2 bg-coffee-dark border border-accent-gold/50 rounded-2xl px-4 py-2 shadow-lg">
-                            <span class="text-sm font-medium">Kopi Terpilih</span>
-                        </div>
-                        <div class="absolute -bottom-2 -right-2 bg-coffee-dark border border-glow-cyan/50 rounded-2xl px-4 py-2 shadow-lg">
-                            <span class="text-sm font-medium">Suasana Premium</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
-    
-    <!-- Keunggulan Section -->
-    <section class="py-16 px-6 bg-coffee-dark/50">
-        <div class="container mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                    Mengapa Memilih <span class="text-accent-gold">Kami</span>?
-                </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Daratan Kopi 25 menghadirkan pengalaman berbeda dengan kombinasi kopi premium dan nuansa mitologi yang epik.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-gold to-glow-cyan flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-seedling text-2xl text-coffee-darker"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Kopi Pilihan</h3>
-                    <p class="text-gray-400 text-center">
-                        Hanya biji kopi terbaik dari petani lokal pilihan yang kami olah dengan teknik roasting khusus.
-                    </p>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-glow-cyan to-glow-blue flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-couch text-2xl text-coffee-darker"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Suasana Nyaman</h3>
-                    <p class="text-gray-400 text-center">
-                        Interior dengan tema Zeus & mitologi Yunani menciptakan atmosfer unik dan nyaman untuk bersantai.
-                    </p>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-glow-blue to-accent-gold flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-coins text-2xl text-coffee-darker"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold mb-4 text-center">Harga Bersahabat</h3>
-                    <p class="text-gray-400 text-center">
-                        Kualitas premium dengan harga terjangkau. Nikmati kopi terbaik tanpa menguras kantong.
-                    </p>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="card-unggulan" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-gold to-glow-blue flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-wifi text-2xl text-coffee-darker"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold mb-4 text-center">WiFi & Colokan</h3>
-                    <p class="text-gray-400 text-center">
-                        WiFi cepat dan colokan di setiap meja, cocok untuk bekerja, nongkrong, atau meeting santai.
-                    </p>
-                </div>
-            </div>
+
+    <!-- LOKASI + MAP + ALAMAT LENGKAP DENGAN ANIMASI PETA -->
+    <section id="lokasi" class="section location">
+      <div class="container">
+        <div class="section-header reveal fade-up">
+          <span class="overline">Kunjungi Kedai</span>
+          <h2 class="section-title">Lokasi & <span>Alamat</span></h2>
+          <p class="section-subtitle">
+            63V8+93C — depan Bumi Walisongo Jeng Asih Randukuning, Dengkek, Pati
+          </p>
         </div>
+
+        <div class="location-grid">
+          <div class="map-container reveal slide-right">
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.034433562165!2d111.03829027499999!3d-6.983447400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70d9dce84be48f%3A0x7a084753c5d233d4!2s63V8%2B93C%2C%20Jl.%20Desa%20Dengkek%2C%20RT.009%2FRW.002%2C%20Dengkek%2C%20Kec.%20Pati%2C%20Kabupaten%20Pati%2C%20Jawa%20Tengah%2059119!5e0!3m2!1sid!2sid!4v1711167890123!5m2!1sid!2sid"
+                width="100%"
+                height="420"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div class="address-info reveal slide-left">
+            <div class="address-card">
+              <div class="address-icon pulse-animation">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <h3>Daratan Kopi 25</h3>
+              <div class="address-full">
+                <p>
+                  <strong>63V8+93C, Jl. Desa Dengkek, RT.009/RW.002</strong>
+                </p>
+                <p>Dengkek, Kec. Pati, Kabupaten Pati</p>
+                <p>Jawa Tengah 59119</p>
+              </div>
+              <div class="address-landmark">
+                <i class="fas fa-landmark"></i> Tepat di depan
+                <span class="highlight"
+                  >Bumi Walisongo Jeng Asih Randukuning</span
+                >
+              </div>
+              <div class="openhours">
+                <p>
+                  <i class="fas fa-clock"></i> Buka setiap hari:
+                  <strong>15.00 – 23.00 WIB</strong> (Jumat 16.00 – 23.00)
+                </p>
+              </div>
+              <div class="contact-small">
+                <p>
+                  <i class="fas fa-phone-alt"></i>
+                  <strong>0812-3456-7890</strong> (WhatsApp)
+                </p>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/63V8"
+                target="_blank"
+                class="btn-map btn-hover-lift"
+              >
+                <i class="fab fa-google"></i> Buka Google Maps
+                <span class="btn-shine-effect"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    
-    <!-- Menu Section -->
-    <section id="menu" class="py-16 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                    Menu <span class="text-accent-gold">Unggulan</span>
-                </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Jelajahi berbagai pilihan minuman dan makanan kami. Setiap sajian dibuat dengan perhatian terhadap detail.
-                </p>
+
+    <!-- FOOTER DENGAN ANIMASI -->
+    <footer id="kontak" class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand reveal fade-up">
+            <h3>Daratan Kopi <span>25</span></h3>
+            <p class="footer-address">
+              <i class="fas fa-map-pin"></i> 63V8+93C, Jl. Desa Dengkek, Pati
+            </p>
+            <p class="footer-tagline">
+              Depan Bumi Walisongo Jeng Asih Randukuning
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
             </div>
-            
-            <!-- Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="100">
-                <button class="menu-filter active" data-filter="all">Semua Menu</button>
-                <button class="menu-filter" data-filter="kopi">Kopi</button>
-                <button class="menu-filter" data-filter="non-kopi">Non-Kopi</button>
-                <button class="menu-filter" data-filter="snack">Snack</button>
-            </div>
-            
-            <!-- Menu Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menuContainer">
-                <!-- Menu items will be rendered by JavaScript -->
-            </div>
+          </div>
+          <div class="footer-links reveal fade-up" data-delay="100">
+            <h4>Navigasi</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#tentang">Tentang</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#galeri">Galeri</a></li>
+              <li><a href="#lokasi">Lokasi</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu-highlight reveal fade-up" data-delay="200">
+            <h4>Menu Favorit</h4>
+            <ul>
+              <li><span>Roti Bakar 2 Sides</span></li>
+              <li><span>Donat Satuan 6K</span></li>
+              <li><span>Nasi Omelet</span></li>
+              <li><span>Kopi Klotok Susu</span></li>
+              <li><span>Thai Tea</span></li>
+            </ul>
+          </div>
         </div>
-    </section>
-    
-    <!-- Tentang Section -->
-    <section id="about" class="py-16 px-6 bg-coffee-dark/50">
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2" data-aos="fade-right">
-                    <!-- About Image -->
-                    <div class="relative">
-                        <div class="rounded-3xl overflow-hidden shadow-2xl">
-                            <div class="h-80 bg-gradient-to-br from-coffee-darker to-accent-gold/30 flex items-center justify-center">
-                                <div class="text-center">
-                                    <div class="text-8xl mb-4">⚡</div>
-                                    <div class="text-2xl font-heading font-bold">Daratan Kopi 25</div>
-                                    <div class="text-gray-400 mt-2">Since 2019</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Floating Badge -->
-                        <div class="absolute -bottom-4 -right-4 bg-coffee-dark border border-accent-gold/50 rounded-2xl px-6 py-3 shadow-xl">
-                            <div class="flex items-center">
-                                <span class="text-2xl font-bold text-accent-gold mr-2">25</span>
-                                <span class="font-medium">Tahun Pengalaman</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2" data-aos="fade-left">
-                    <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
-                        Cerita <span class="text-accent-gold">Kami</span>
-                    </h2>
-                    
-                    <p class="text-gray-300 mb-6">
-                        <span class="text-accent-gold font-bold">Daratan Kopi 25</span> didirikan pada tahun 2019 dengan visi menghadirkan pengalaman ngopi yang berbeda. Terinspirasi dari kekuatan dan keagungan Dewa Zeus dalam mitologi Yunani, kami ingin setiap pengunjung merasakan "energi petir" dalam setiap tegukan kopi.
-                    </p>
-                    
-                    <p class="text-gray-300 mb-6">
-                        Nama "25" melambangkan 25 jenis kopi pertama yang kami sajikan saat pembukaan, serta usia pendiri saat membuka kedai ini. Kini, kami telah berkembang dengan tetap mempertahankan kualitas dan filosofi awal.
-                    </p>
-                    
-                    <p class="text-gray-300 mb-8">
-                        Suasana interior kami dirancang khusus dengan elemen-elemen mitologi Yunani, petir, dan energi kosmik untuk menciptakan pengalaman yang immersive dan tak terlupakan bagi setiap pengunjung.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-accent-gold mr-2"></i>
-                            <span>Kopi dari petani lokal terpilih</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-accent-gold mr-2"></i>
-                            <span>Roasting khusus setiap hari</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-accent-gold mr-2"></i>
-                            <span>Suasana unik bertema mitologi</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="footer-bottom reveal fade-up">
+          <div class="copyright">
+            <p>
+              © <span id="year"></span> Daratan Kopi 25. All rights reserved.
+            </p>
+            <p class="small">
+              Roti Bakar • Donat 6K • Burjo • Kopi Klotok • Tea Series • Choco
+              Series
+            </p>
+          </div>
         </div>
-    </section>
-    
-    <!-- Galeri Section -->
-    <section id="gallery" class="py-16 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                    <span class="text-accent-gold">Galeri</span> Kami
-                </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Jelajahi suasana unik Daratan Kopi 25 melalui koleksi foto-foto kami.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
-                <!-- Gallery items will be populated by JavaScript -->
-            </div>
-        </div>
-        
-        <!-- Lightbox Modal -->
-        <div class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center hidden" id="lightboxModal">
-            <div class="relative max-w-4xl w-full mx-4">
-                <button class="absolute -top-12 right-0 text-3xl text-white hover:text-accent-gold transition-colors" id="closeLightbox" aria-label="Close Lightbox">
-                    <i class="fas fa-times"></i>
-                </button>
-                
-                <div class="bg-coffee-dark rounded-2xl overflow-hidden">
-                    <img id="lightboxImage" src="" alt="" class="w-full h-auto max-h-[70vh] object-contain">
-                    <div class="p-4">
-                        <h3 id="lightboxTitle" class="text-xl font-heading font-bold"></h3>
-                        <p id="lightboxDesc" class="text-gray-400 mt-2"></p>
-                    </div>
-                </div>
-                
-                <div class="flex justify-between mt-4">
-                    <button class="text-white hover:text-accent-gold transition-colors" id="prevImage" aria-label="Previous Image">
-                        <i class="fas fa-chevron-left mr-2"></i> Sebelumnya
-                    </button>
-                    <button class="text-white hover:text-accent-gold transition-colors" id="nextImage" aria-label="Next Image">
-                        Selanjutnya <i class="fas fa-chevron-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimoni Section -->
-    <section id="testimonials" class="py-16 px-6 bg-coffee-dark/50">
-        <div class="container mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                    Kata <span class="text-accent-gold">Pelanggan</span>
-                </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Lihat apa kata mereka tentang pengalaman di Daratan Kopi 25.
-                </p>
-            </div>
-            
-            <div class="relative max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                <!-- Testimonial Slider -->
-                <div class="overflow-hidden rounded-3xl bg-coffee-dark/80 backdrop-blur-sm border border-accent-gold/20 p-8">
-                    <div class="testimonial-slider" id="testimonialSlider">
-                        <!-- Testimonials will be populated by JavaScript -->
-                    </div>
-                    
-                    <!-- Testimonial Navigation -->
-                    <div class="flex justify-center mt-8 space-x-4">
-                        <button class="testimonial-nav" id="prevTestimonial" aria-label="Previous Testimonial">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <div class="flex space-x-2" id="testimonialDots">
-                            <!-- Dots will be populated by JavaScript -->
-                        </div>
-                        <button class="testimonial-nav" id="nextTestimonial" aria-label="Next Testimonial">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Decorative Elements -->
-                <div class="absolute -top-4 -left-4 w-16 h-16 bg-accent-gold/10 rounded-full blur-xl"></div>
-                <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-glow-cyan/10 rounded-full blur-xl"></div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Lokasi & Jam Buka Section -->
-    <section id="location" class="py-16 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                    Lokasi & <span class="text-accent-gold">Jam Buka</span>
-                </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Kunjungi kedai kami dan nikmati pengalaman langsung di Daratan Kopi 25.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Map & Address -->
-                <div data-aos="fade-right">
-                    <div class="rounded-3xl overflow-hidden shadow-2xl mb-8">
-                        <!-- Map Placeholder -->
-                        <div class="h-80 bg-gradient-to-br from-coffee-darker to-glow-cyan/20 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-map-marked-alt text-6xl text-accent-gold mb-4"></i>
-                                <h3 class="text-2xl font-heading font-bold">Daratan Kopi 25</h3>
-                                <p class="text-gray-400 mt-2">Jl. Mitologi No. 25, Jakarta Selatan</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col space-y-6">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-accent-gold text-xl mt-1 mr-4"></i>
-                            <div>
-                                <h4 class="font-heading font-bold text-lg mb-1">Alamat</h4>
-                                <p class="text-gray-400">Jl. Mitologi No. 25, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12120</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <i class="fas fa-clock text-accent-gold text-xl mt-1 mr-4"></i>
-                            <div>
-                                <h4 class="font-heading font-bold text-lg mb-1">Jam Operasional</h4>
-                                <p class="text-gray-400">Setiap hari: 07:00 - 22:00 WIB</p>
-                                <p class="text-gray-400 text-sm">Termasuk hari libur nasional</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <i class="fas fa-phone-alt text-accent-gold text-xl mt-1 mr-4"></i>
-                            <div>
-                                <h4 class="font-heading font-bold text-lg mb-1">Telepon</h4>
-                                <p class="text-gray-400">(021) 2555-2525</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="btn-primary mt-8 w-full" onclick="window.open('https://maps.google.com/?q=Daratan+Kopi+25+Jakarta+Selatan', '_blank')">
-                        <i class="fas fa-external-link-alt mr-2"></i> Buka di Google Maps
-                    </button>
-                </div>
-                
-                <!-- Opening Hours & Contact Form -->
-                <div data-aos="fade-left">
-                    <!-- Opening Hours Card -->
-                    <div class="bg-coffee-dark/80 backdrop-blur-sm rounded-3xl p-8 mb-8 border border-accent-gold/20">
-                        <h3 class="text-2xl font-heading font-bold mb-6 text-center">Jam Buka</h3>
-                        
-                        <div class="space-y-4">
-                            <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                                <span class="font-medium">Senin - Jumat</span>
-                                <span class="text-accent-gold font-bold">07:00 - 22:00</span>
-                            </div>
-                            <div class="flex justify-between items-center py-3 border-b border-gray-800">
-                                <span class="font-medium">Sabtu - Minggu</span>
-                                <span class="text-accent-gold font-bold">07:00 - 23:00</span>
-                            </div>
-                            <div class="flex justify-between items-center py-3">
-                                <span class="font-medium">Hari Libur</span>
-                                <span class="text-accent-gold font-bold">08:00 - 22:00</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 p-4 bg-coffee-darker rounded-2xl">
-                            <div class="flex items-center">
-                                <i class="fas fa-info-circle text-glow-cyan mr-3 text-xl"></i>
-                                <p class="text-sm text-gray-400">
-                                    Pada hari libur nasional, kami tetap buka dengan jam operasional khusus. Disarankan reservasi untuk kunjungan di atas 5 orang.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Form -->
-                    <div class="bg-coffee-dark/80 backdrop-blur-sm rounded-3xl p-8 border border-accent-gold/20">
-                        <h3 class="text-2xl font-heading font-bold mb-6 text-center">Hubungi Kami</h3>
-                        <p class="text-gray-400 text-center mb-6">
-                            Ingin reservasi atau menanyakan sesuatu? Kirim pesan langsung ke WhatsApp kami.
-                        </p>
-                        
-                        <form id="whatsappForm">
-                            <div class="mb-6">
-                                <label for="name" class="block mb-2 font-medium">Nama Lengkap</label>
-                                <input type="text" id="name" name="name" required 
-                                       class="form-input" placeholder="Masukkan nama Anda">
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label for="phone" class="block mb-2 font-medium">Nomor WhatsApp</label>
-                                <input type="tel" id="phone" name="phone" required 
-                                       class="form-input" placeholder="Contoh: 081234567890">
-                            </div>
-                            
-                            <div class="mb-8">
-                                <label for="message" class="block mb-2 font-medium">Pesan</label>
-                                <textarea id="message" name="message" rows="4" required 
-                                          class="form-input" placeholder="Tulis pesan Anda di sini..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn-primary w-full">
-                                <i class="fab fa-whatsapp mr-2"></i> Kirim ke WhatsApp
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-coffee-dark py-12 px-6">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <!-- Brand -->
-                <div>
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-accent-gold to-glow-cyan flex items-center justify-center">
-                            <i class="fas fa-bolt text-coffee-darker text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-heading font-bold text-xl">Daratan Kopi <span class="text-accent-gold">25</span></h3>
-                            <p class="text-gray-400 text-sm">Kopi x Mitologi</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400">
-                        Menghadirkan kopi premium dengan nuansa mitologi Zeus yang epik. Pengalaman ngopi yang tak terlupakan sejak 2019.
-                    </p>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Tautan Cepat</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="footer-link">Beranda</a></li>
-                        <li><a href="#menu" class="footer-link">Menu</a></li>
-                        <li><a href="#about" class="footer-link">Tentang Kami</a></li>
-                        <li><a href="#gallery" class="footer-link">Galeri</a></li>
-                        <li><a href="#testimonials" class="footer-link">Testimoni</a></li>
-                        <li><a href="#location" class="footer-link">Lokasi</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Kontak</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3"></i>
-                            <span class="text-gray-400">Jl. Mitologi No. 25, Jakarta Selatan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone-alt text-accent-gold mt-1 mr-3"></i>
-                            <span class="text-gray-400">(021) 2555-2525</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope text-accent-gold mt-1 mr-3"></i>
-                            <span class="text-gray-400">info@daratankopi25.com</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Social Media -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Ikuti Kami</h4>
-                    <p class="text-gray-400 mb-6">
-                        Ikuti perkembangan terbaru dan promo spesial dari Daratan Kopi 25.
-                    </p>
-                    
-                    <div class="flex space-x-4">
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="TikTok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Newsletter -->
-                    <div class="mt-8">
-                        <p class="text-gray-400 text-sm mb-2">Dapatkan info promo terbaru</p>
-                        <div class="flex">
-                            <input type="email" placeholder="Email Anda" class="flex-grow bg-coffee-darker border border-gray-800 rounded-l-2xl px-4 py-3 focus:outline-none focus:border-accent-gold">
-                            <button class="bg-gradient-to-r from-accent-gold to-glow-cyan text-coffee-darker font-bold px-4 rounded-r-2xl hover:opacity-90 transition-opacity">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="pt-8 border-t border-gray-800 text-center">
-                <p class="text-gray-500">
-                    &copy; <span id="currentYear"></span> Daratan Kopi 25. Hak cipta dilindungi.
-                </p>
-                <p class="text-gray-600 text-sm mt-2">
-                    Dibuat dengan <i class="fas fa-heart text-red-500 mx-1"></i> untuk para pecinta kopi.
-                </p>
-            </div>
-        </div>
+      </div>
     </footer>
-    
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Custom JS -->
+
+    <!-- BACK TO TOP BUTTON (ANIMASI) -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+      <span class="tooltip">Kembali ke atas</span>
+    </button>
+
+    <!-- CUSTOM JS -->
     <script src="app.js"></script>
-    
-    <!-- Initialize AOS -->
-    <script>
-        // Initialize AOS inside HTML to ensure it runs after page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 800,
-                offset: 100,
-                once: true
-            });
-            
-            // Set current year in footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        });
-    </script>
-</body>
+  </body>
 </html>
