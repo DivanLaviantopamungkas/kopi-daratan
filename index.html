@@ -6,16 +6,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
     />
-    <title>Daratan Kopi 25 · Kopi & Roti Bakar Dengkek Pati</title>
+    <title>Daratan Kopi 25 · Live Music & Nonton Bola · Dengkek Pati</title>
     <!-- SEO -->
     <meta
       name="description"
-      content="Daratan Kopi 25 – Kedai di depan Bumi Walisongo Dengkek. Roti bakar 2 sides (Abon, Chocomaltine, Crumbs), Donat 6K 15 varian, Burjo, Kopi Klotok. Alamat lengkap 63V8+93C Jl. Desa Dengkek, Pati."
+      content="Daratan Kopi 25 – Kedai 24 jam di depan Bumi Walisongo Dengkek. Live Music tiap Jumat & Sabtu, Nonton Live Sepakbola, Roti bakar 2 sides, Donat 6K, Burjo, Kopi Klotok."
     />
     <!-- Favicon -->
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23b28a5c'/><path d='M30 40 L70 40 L65 70 L35 70 Z' fill='%23fcf3e6'/><circle cx='50' cy='35' r='10' fill='%23fcf3e6'/><text x='50' y='82' font-size='24' fill='%23fcf3e6' font-family='Arial' text-anchor='middle' font-weight='bold'>25</text></svg>"
     />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,17 +33,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- PRELOADER ANIMATION (HALUS) -->
+    <!-- PRELOADER ANIMATION -->
     <div class="preloader" id="preloader">
       <div class="preloader-content">
         <div class="preloader-logo">
+          <img
+            src="images/logo1.png"
+            alt="Daratan Kopi 25 Logo"
+            class="preloader-img"
+          />
           <span>Daratan Kopi 25</span>
         </div>
         <div class="preloader-progress"></div>
       </div>
     </div>
 
-    <!-- NAVBAR DENGAN ANIMASI SCROLL -->
+    <!-- NAVBAR DENGAN LOGO GAMBAR -->
     <header class="navbar" id="navbar">
       <div class="nav-container">
         <a href="#home" class="logo">
@@ -67,6 +72,11 @@
             </li>
             <li><a href="#menu" class="nav-link" data-text="Menu">Menu</a></li>
             <li>
+              <a href="#keunggulan" class="nav-link" data-text="Keunggulan"
+                >Keunggulan</a
+              >
+            </li>
+            <li>
               <a href="#galeri" class="nav-link" data-text="Galeri">Galeri</a>
             </li>
             <li>
@@ -80,34 +90,35 @@
       </div>
     </header>
 
-    <!-- HERO SECTION DENGAN PARALLAX & ANIMASI MUNCUL BERTAHAP -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-particles" id="particles"></div>
       <div class="hero-content">
         <div class="hero-badge-wrapper">
           <span class="hero-badge animate-float">
-            <i class="fas fa-location-dot"></i> Dengkek, Pati • Depan Bumi
-            Walisongo
+            <i class="fas fa-location-dot"></i> Jl. Raya Dengkek, Pati • Depan
+            Bumi Walisongo
           </span>
         </div>
         <h1 class="hero-title">
-          <span class="title-line line-1">Roti Bakar 2 Sides</span>
-          <span class="title-line line-2">Donat 6K • Burjo</span>
-          <span class="title-line line-3">Kopi Klotok Susu</span>
+          <span class="title-line line-1">Live Music & Nonton Bola</span>
+          <span class="title-line line-2">Roti Bakar 2 Sides</span>
+          <span class="title-line line-3">Donat 6K • Kopi Klotok</span>
         </h1>
         <p class="hero-subtitle">
-          Kedai kecil di pinggir sawah, depan Bumi Walisongo Jeng Asih
-          Randukuning. 15 varian donat, 25+ menu roti bakar, magelangan spesial,
-          dan tea series.
+          Kedai 24 jam di pinggir sawah, depan Bumi Walisongo Jeng Asih
+          Randukuning. Live Music tiap Jumat & Sabtu malam, Nonton Live
+          Sepakbola semua big match. 15 varian donat, 25+ menu roti bakar,
+          magelangan spesial.
         </p>
         <div class="hero-buttons">
           <a href="#menu" class="btn-primary btn-pulse">
             <i class="fas fa-mug-hot"></i> Lihat Menu
             <span class="btn-ring"></span>
           </a>
-          <a href="#lokasi" class="btn-outline btn-shine">
-            <i class="fas fa-map-pin"></i> Alamat Lengkap
+          <a href="#keunggulan" class="btn-outline btn-shine">
+            <i class="fas fa-music"></i> Live Music & Bola
           </a>
         </div>
         <div class="hero-scroll-indicator animate-bounce">
@@ -117,7 +128,7 @@
       </div>
     </section>
 
-    <!-- TENTANG DENGK EK + ALAMAT LENGKAP DENGAN ANIMASI SLIDE -->
+    <!-- TENTANG + ALAMAT LENGKAP -->
     <section id="tentang" class="section about">
       <div class="container">
         <div class="about-grid">
@@ -129,7 +140,7 @@
                 loading="lazy"
               />
               <div class="image-badge pulse-badge">
-                <i class="fas fa-map-pin"></i> 63V8+93C, Jl. Desa Dengkek
+                <i class="fas fa-map-pin"></i> Jl. Raya Dengkek, Pati
               </div>
             </div>
             <div class="decoration-dots"></div>
@@ -137,29 +148,32 @@
           <div class="about-text reveal slide-left">
             <div class="section-tag">
               <span class="tag-line"></span>
-              <span class="tag-text">Sejak 2019</span>
+              <span class="tag-text">Buka 24 Jam • Sejak 2019</span>
             </div>
             <h2>Daratan Kopi <span>25</span></h2>
             <p class="address-highlight">
               <i class="fas fa-location-dot"></i>
               <strong
-                >63V8+93C, Jl. Desa Dengkek, RT.009/RW.002, Dengkek, Kec. Pati,
-                Kabupaten Pati, Jawa Tengah 59119</strong
+                >Jl. Raya Dengkek, Pati | 63V8+93C, Jl. Desa Dengkek,
+                RT.009/RW.002, Dengkek, Kec. Pati, Kabupaten Pati, Jawa Tengah
+                59119</strong
               >
               <span class="tooltip"
                 >Depan Bumi Walisongo Jeng Asih Randukuning</span
               >
             </p>
             <p class="about-desc">
-              Kedai kami mulai buka 2019, terkenal dengan
+              Kedai kami buka <span class="text-gradient">24 jam nonstop</span>,
+              siap menemani kapan pun. Terkenal dengan
+              <span class="text-gradient">Live Music</span> setiap Jumat & Sabtu
+              malam,
+              <span class="text-gradient">Nonton Live Sepakbola</span> semua big
+              match (Liga Inggris, Liga Champions, Liga Indonesia, Piala Dunia)
+              dengan layar proyektor. Juga tersedia
               <span class="text-gradient">Roti Bakar 2 sides</span> (Abon,
               Chocomaltine, Crumbs, Tiramisu),
               <span class="text-gradient">Donat Satuan 6K</span> dengan 15
-              varian (Tiramisu, Coklat Crunchy, Abon Hot Creamy, Red Velvet,
-              Oreo, Greentea, Caramel Crumb, dan banyak lagi), serta menu Burjo
-              komplit: Nasi Omelet, Magelangan Spesial, Pisang Bakar Spesial,
-              dan aneka minuman seperti Thai Tea, Choco Hazelnut, Kopi Klotok
-              Susu, dan GoodDay Freeze.
+              varian, serta menu Burjo komplit dan aneka minuman.
             </p>
 
             <div class="stats-container">
@@ -186,7 +200,99 @@
       </div>
     </section>
 
-    <!-- MENU UNGGULAN DENGAN ANIMASI CARD 3D & HOVER EFEK -->
+    <!-- SECTION KEUNGGULAN - LIVE MUSIC & NONTON BOLA -->
+    <section id="keunggulan" class="section advantages">
+      <div class="container">
+        <div class="section-header reveal fade-up">
+          <span class="overline">Hanya di Daratan Kopi 25</span>
+          <h2 class="section-title">Keunggulan <span>Kami</span></h2>
+          <p class="section-subtitle">
+            Lebih dari sekadar kedai kopi — tempat nongkrong favorit wong Pati
+          </p>
+        </div>
+
+        <div class="advantages-grid">
+          <!-- 1. Live Music -->
+          <div class="advantage-card reveal card-rotate">
+            <div class="advantage-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3>Live Music</h3>
+            <div class="advantage-schedule">
+              <span class="schedule-badge">Jumat & Sabtu</span>
+              <span class="schedule-time">19.30 - 22.30 WIB</span>
+            </div>
+            <p>
+              Akustikan, pop, campursari. Bawain lagu favoritmu atau request
+              langsung ke musisi. Suasana malam minggu jadi lebih hangat.
+            </p>
+          </div>
+
+          <!-- 2. Nonton Live Sepakbola -->
+          <div class="advantage-card reveal card-rotate" data-delay="100">
+            <div class="advantage-icon">
+              <i class="fas fa-futbol"></i>
+            </div>
+            <h3>Nonton Live Sepakbola</h3>
+            <div class="advantage-schedule">
+              <span class="schedule-badge">Big Match</span>
+              <span class="schedule-time">Live di layar proyektor</span>
+            </div>
+            <p>
+              Liga Inggris, Liga Champions, Liga 1, Piala Dunia, Timnas
+              Indonesia. Nonton bareng, rame, gratis! Tersedia juga jadwal
+              nonton tiap pekan.
+            </p>
+            <a
+              href="#"
+              class="advantage-link"
+              onclick="
+                alert(
+                  'Jadwal pertandingan akan diupdate tiap minggu di Instagram @daratankopi25. Silahkan follow!',
+                );
+                return false;
+              "
+            >
+              Lihat Jadwal Bola <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 3. Buka 24 Jam -->
+          <div class="advantage-card reveal card-rotate" data-delay="200">
+            <div class="advantage-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Buka 24 Jam</h3>
+            <div class="advantage-schedule">
+              <span class="schedule-badge">Nonstop</span>
+              <span class="schedule-time">Setiap hari</span>
+            </div>
+            <p>
+              Gak takut kelaparan tengah malam. Mau ngopi subuh, nugas malam,
+              atau nongkrong habis sahur — kami selalu buka.
+            </p>
+          </div>
+
+          <!-- 4. Wi-Fi & Colokan -->
+          <div class="advantage-card reveal card-rotate" data-delay="300">
+            <div class="advantage-icon">
+              <i class="fas fa-wifi"></i>
+            </div>
+            <h3>WiFi & Colokan</h3>
+            <div class="advantage-schedule">
+              <span class="schedule-badge">Gratis</span>
+              <span class="schedule-time">Kecepatan 50Mbps</span>
+            </div>
+            <p>
+              Cocok buat WFA (Work From Anywhere), nugas, atau main game.
+              Tersedia colokan di setiap meja.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU UNGGULAN (TETAP SAMA) -->
     <section id="menu" class="section menu">
       <div class="container">
         <div class="section-header reveal fade-up">
@@ -328,7 +434,7 @@
             class="btn-outline btn-hover-lift"
             onclick="
               alert(
-                '🍞🥤 Menu lengkap: Roti Bakar 1 side / 2 sides, Donat Satuan 6K, Burjo, Snack, Tea Series, Choco Series, Coffee Series, Yoghurt & Others. Kunjungi kedai kami di Dengkek, Pati!',
+                '🍞🥤 Menu lengkap: Roti Bakar 1 side / 2 sides, Donat Satuan 6K, Burjo, Snack, Tea Series, Choco Series, Coffee Series, Yoghurt & Others. Kunjungi kedai 24 jam kami di Dengkek, Pati!',
               );
               return false;
             "
@@ -340,27 +446,47 @@
       </div>
     </section>
 
-    <!-- GALERI DENGAN HOVER ZOOM & PARALLAX -->
+    <!-- GALERI (TAMBAH FOTO LIVE MUSIC & BOLA) -->
     <section id="galeri" class="section gallery">
       <div class="container">
         <div class="section-header reveal fade-up">
           <span class="overline">Suasana & Visual</span>
           <h2 class="section-title">Galeri <span>Kedai</span></h2>
           <p class="section-subtitle">
-            Dari lesehan, roti bakar, donat, hingga kopi khas Dengkek
+            Live music, nobar bola, lesehan, roti bakar, donat, dan kopi khas
+            Dengkek
           </p>
         </div>
 
         <div class="gallery-grid">
           <div class="gallery-item reveal zoom-in">
             <div class="gallery-img-wrapper">
-              <img src="images/suasana.jpg" alt="Suasana kedai malam" />
+              <img
+                src="images/live-music.jpg"
+                alt="Live Music Daratan Kopi 25"
+              />
               <div class="gallery-overlay">
-                <span>Suasana Lesehan</span>
+                <span>Live Music • Jumat & Sabtu</span>
               </div>
             </div>
           </div>
           <div class="gallery-item reveal zoom-in" data-delay="100">
+            <div class="gallery-img-wrapper">
+              <img src="images/nobar-bola.jpg" alt="Nobar Sepakbola" />
+              <div class="gallery-overlay">
+                <span>Nonton Bola • Layar Proyektor</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item reveal zoom-in" data-delay="200">
+            <div class="gallery-img-wrapper">
+              <img src="images/suasana.jpg" alt="Suasana kedai malam" />
+              <div class="gallery-overlay">
+                <span>Suasana Lesehan 24 Jam</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item reveal zoom-in" data-delay="300">
             <div class="gallery-img-wrapper">
               <img src="images/rotisides.png" alt="Roti Bakar" />
               <div class="gallery-overlay">
@@ -368,30 +494,11 @@
               </div>
             </div>
           </div>
-          <div class="gallery-item reveal zoom-in" data-delay="200">
+          <div class="gallery-item reveal zoom-in" data-delay="400">
             <div class="gallery-img-wrapper">
               <img src="images/donat.avif" alt="Donat aneka rasa" />
               <div class="gallery-overlay">
                 <span>Donat Satuan 6K</span>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item reveal zoom-in" data-delay="300">
-            <div class="gallery-img-wrapper">
-              <img src="images/pisanggoreng.jpg" alt="Pisanag Goreng" />
-              <div class="gallery-overlay">
-                <span>Pisang Goreng</span>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item reveal zoom-in" data-delay="400">
-            <div class="gallery-img-wrapper">
-              <img
-                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1974&auto=format&fit=crop"
-                alt="Kopi susu"
-              />
-              <div class="gallery-overlay">
-                <span>Kopi Susu ABC</span>
               </div>
             </div>
           </div>
@@ -407,7 +514,7 @@
       </div>
     </section>
 
-    <!-- TESTIMONI DENGAN ANIMASI SLIDER & AUTO PLAY -->
+    <!-- TESTIMONI (SAMA) -->
     <section id="testimoni" class="section testimonials">
       <div class="container">
         <div class="section-header reveal fade-up">
@@ -423,9 +530,9 @@
             <div class="testimonial-card">
               <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
               <p>
-                "Roti bakar abone akeh, donat Tiramisune lembut. Paling seneng
-                varian Chocomaltine – kacang. Kopi klotoke mantep, es Thailand
-                tea seger."
+                "Roti bakar abone akeh, donat Tiramisune lembut. Live music-nya
+                enak, suasanane makin rame. Nonton bola bareng kanca-kanca
+                mantep tenan!"
               </p>
               <div class="user">
                 <div class="user-avatar">
@@ -441,8 +548,8 @@
               <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
               <p>
                 "Magelangan spesial + es Thai Tea, cocok banget buat ngabuburit.
-                Tempatnya adem, persis depan Bumi Walisongo. Donat Coklat
-                Crunchy Kacang wajib coba!"
+                Apalagi pas ada live music Jumat malam, tambah betah. Donat
+                Coklat Crunchy Kacang wajib coba!"
               </p>
               <div class="user">
                 <div class="user-avatar">
@@ -458,8 +565,8 @@
               <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
               <p>
                 "Kopi klotok susune mantep, pisang bakar spesial kejune medok.
-                Rega bersahabat, dadi langganan. Roti bakar Crumbs Greentea +
-                Tiramisu favorit keluargaku."
+                Sering nonton bola disini, proyektore gede, gambare jelas. Dadi
+                langganan wae."
               </p>
               <div class="user">
                 <div class="user-avatar">
@@ -468,23 +575,6 @@
                 <div class="user-info">
                   <span class="user-name">Bu Yanti</span>
                   <span class="user-location">Dengkek</span>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
-              <p>
-                "Nasi omeletnya beda, tebal dan bumbunya meresap. Pisang crispy
-                spesial topping coklat-keju banyak. Tempat nongkrong favorit
-                anak Pati."
-              </p>
-              <div class="user">
-                <div class="user-avatar">
-                  <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="user-info">
-                  <span class="user-name">Rizky Ramadhan</span>
-                  <span class="user-location">Pati Lor</span>
                 </div>
               </div>
             </div>
@@ -502,14 +592,14 @@
       </div>
     </section>
 
-    <!-- LOKASI + MAP + ALAMAT LENGKAP DENGAN ANIMASI PETA -->
+    <!-- LOKASI + MAP + ALAMAT LENGKAP + 2 NOMOR + JAM 24 JAM -->
     <section id="lokasi" class="section location">
       <div class="container">
         <div class="section-header reveal fade-up">
-          <span class="overline">Kunjungi Kedai</span>
+          <span class="overline">Kunjungi Kedai 24 Jam</span>
           <h2 class="section-title">Lokasi & <span>Alamat</span></h2>
           <p class="section-subtitle">
-            63V8+93C — depan Bumi Walisongo Jeng Asih Randukuning, Dengkek, Pati
+            Jl. Raya Dengkek, Pati — depan Bumi Walisongo Jeng Asih Randukuning
           </p>
         </div>
 
@@ -534,9 +624,8 @@
               </div>
               <h3>Daratan Kopi 25</h3>
               <div class="address-full">
-                <p>
-                  <strong>63V8+93C, Jl. Desa Dengkek, RT.009/RW.002</strong>
-                </p>
+                <p><strong>Jl. Raya Dengkek, Pati</strong></p>
+                <p>63V8+93C, Jl. Desa Dengkek, RT.009/RW.002</p>
                 <p>Dengkek, Kec. Pati, Kabupaten Pati</p>
                 <p>Jawa Tengah 59119</p>
               </div>
@@ -548,15 +637,54 @@
               </div>
               <div class="openhours">
                 <p>
-                  <i class="fas fa-clock"></i> Buka setiap hari:
-                  <strong>15.00 – 23.00 WIB</strong> (Jumat 16.00 – 23.00)
+                  <i class="fas fa-clock"></i> Buka <strong>24 JAM</strong>
+                  <span style="color: #b28a5c; font-weight: 700">nonstop</span>
+                  • Setiap hari
                 </p>
               </div>
-              <div class="contact-small">
-                <p>
-                  <i class="fas fa-phone-alt"></i>
-                  <strong>0812-3456-7890</strong> (WhatsApp)
+              <div class="contact-small" style="margin-top: 20px">
+                <p style="display: flex; align-items: center; gap: 12px">
+                  <i class="fab fa-whatsapp" style="color: #25d366"></i>
+                  <strong>0822-4246-0697</strong> (WhatsApp)
                 </p>
+                <p style="display: flex; align-items: center; gap: 12px">
+                  <i class="fas fa-phone-alt" style="color: #b28a5c"></i>
+                  <strong>0858-2274-9626</strong> (Telepon)
+                </p>
+              </div>
+              <div
+                class="advantage-tags"
+                style="
+                  margin-top: 20px;
+                  display: flex;
+                  gap: 12px;
+                  flex-wrap: wrap;
+                "
+              >
+                <span
+                  style="
+                    background: #fcf3e8;
+                    padding: 8px 16px;
+                    border-radius: 60px;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: #b28a5c;
+                  "
+                >
+                  <i class="fas fa-music"></i> Live Music Jum'at & Sabtu
+                </span>
+                <span
+                  style="
+                    background: #fcf3e8;
+                    padding: 8px 16px;
+                    border-radius: 60px;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: #b28a5c;
+                  "
+                >
+                  <i class="fas fa-futbol"></i> Nonton Bola
+                </span>
               </div>
               <a
                 href="https://maps.app.goo.gl/63V8"
@@ -572,24 +700,66 @@
       </div>
     </section>
 
-    <!-- FOOTER DENGAN ANIMASI -->
+    <!-- FOOTER DENGAN INFORMASI LENGKAP -->
     <footer id="kontak" class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand reveal fade-up">
             <h3>Daratan Kopi <span>25</span></h3>
             <p class="footer-address">
-              <i class="fas fa-map-pin"></i> 63V8+93C, Jl. Desa Dengkek, Pati
+              <i class="fas fa-map-pin"></i> Jl. Raya Dengkek, Pati • 63V8+93C
             </p>
             <p class="footer-tagline">
               Depan Bumi Walisongo Jeng Asih Randukuning
             </p>
-            <div class="social-icons">
+            <p class="footer-hours">
+              <i class="fas fa-clock"></i> Buka 24 Jam Nonstop
+            </p>
+            <div class="footer-highlights" style="margin-top: 15px">
+              <span
+                style="
+                  display: inline-block;
+                  background: rgba(178, 138, 92, 0.2);
+                  padding: 6px 14px;
+                  border-radius: 60px;
+                  font-size: 0.85rem;
+                  margin-right: 8px;
+                  margin-bottom: 8px;
+                "
+              >
+                <i class="fas fa-music"></i> Live Music
+              </span>
+              <span
+                style="
+                  display: inline-block;
+                  background: rgba(178, 138, 92, 0.2);
+                  padding: 6px 14px;
+                  border-radius: 60px;
+                  font-size: 0.85rem;
+                "
+              >
+                <i class="fas fa-futbol"></i> Nonton Bola
+              </span>
+            </div>
+            <div class="footer-contact" style="margin-top: 20px">
+              <p style="display: flex; align-items: center; gap: 10px">
+                <i class="fab fa-whatsapp" style="color: #25d366"></i>
+                <span>0822-4246-0697</span>
+              </p>
+              <p style="display: flex; align-items: center; gap: 10px">
+                <i class="fas fa-phone-alt" style="color: #b28a5c"></i>
+                <span>0858-2274-9626</span>
+              </p>
+            </div>
+            <div class="social-icons" style="margin-top: 25px">
               <a href="#" class="social-icon"
                 ><i class="fab fa-instagram"></i
               ></a>
               <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
-              <a href="#" class="social-icon"
+              <a
+                href="https://wa.me/6282242460697"
+                class="social-icon"
+                target="_blank"
                 ><i class="fab fa-whatsapp"></i
               ></a>
               <a href="#" class="social-icon"
@@ -603,6 +773,7 @@
               <li><a href="#home">Home</a></li>
               <li><a href="#tentang">Tentang</a></li>
               <li><a href="#menu">Menu</a></li>
+              <li><a href="#keunggulan">Keunggulan</a></li>
               <li><a href="#galeri">Galeri</a></li>
               <li><a href="#lokasi">Lokasi</a></li>
             </ul>
@@ -616,6 +787,11 @@
               <li><span>Kopi Klotok Susu</span></li>
               <li><span>Thai Tea</span></li>
             </ul>
+            <h4 style="margin-top: 25px">Jadwal Live Music</h4>
+            <ul>
+              <li><span>Jumat & Sabtu</span></li>
+              <li><span>19.30 - 22.30 WIB</span></li>
+            </ul>
           </div>
         </div>
         <div class="footer-bottom reveal fade-up">
@@ -625,14 +801,14 @@
             </p>
             <p class="small">
               Roti Bakar • Donat 6K • Burjo • Kopi Klotok • Tea Series • Choco
-              Series
+              Series • Live Music • Nonton Bola • Buka 24 Jam
             </p>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- BACK TO TOP BUTTON (ANIMASI) -->
+    <!-- BACK TO TOP BUTTON -->
     <button id="backToTop" class="back-to-top">
       <i class="fas fa-arrow-up"></i>
       <span class="tooltip">Kembali ke atas</span>
