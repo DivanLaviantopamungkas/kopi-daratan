@@ -1833,3 +1833,52 @@ body {
 .footer-hours i {
   margin-right: 8px;
 }
+
+/* Product Image Frame Styles */
+.product-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 30px rgba(178, 138, 92, 0.2);
+  border: 3px solid #b28a5c;
+}
+
+.product-image-frame-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.product-image-frame:hover .product-image-frame-img {
+  transform: scale(1.1);
+}
+
+.product-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(178, 138, 92, 0.9), transparent);
+  padding: 20px 15px 15px;
+  text-align: center;
+}
+
+.product-image-text {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
+
+/* Sembunyikan weight yang lama */
+.product-weight-large {
+  display: none;
+}
